@@ -1,5 +1,9 @@
 name: ezIgnite
 version: '1.0'
 main: me.trusty.ezIgnite.EzIgnite
-authors: [iTrusty, Tyler]
+authors: [iTrusty, Xavzen]
 api-version: '1.21'
+permissions:
+  ezignite.light:
+    description: Allows the player to ignite TNT by right-clicking it.
+    default: op
