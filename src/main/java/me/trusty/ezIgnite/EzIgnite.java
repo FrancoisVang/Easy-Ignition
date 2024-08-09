@@ -32,19 +32,20 @@ public final class EzIgnite extends JavaPlugin implements Listener {
             if (blockType == Material.TNT) {
                 // Get the player who clicked the block
                 Player player = event.getPlayer();
-
+                Player p = event.getPlayer();
                 // Check if the player has an empty hand
                 ItemStack handItem = player.getInventory().getItemInMainHand();
-                if (handItem.getType() == Material.AIR) {
+                if (handItem.getType() == Material.AIR && p.hasPermission("ezignite.light")){
                     // Ignite the TNT
                     org.bukkit.Location l = event.getClickedBlock().getLocation();
                     event.getClickedBlock().setType(Material.AIR);
                     TNTPrimed tnt = (TNTPrimed) l.getWorld().spawnEntity(l.add(0.5,0,0.5), EntityType.TNT);
+                } else {
+                    p.sendMessage("You do not have permission.");
+                }
                 }
             }
         }
-    }
-
     @Override
     public void onDisable() {
         //section for code here
