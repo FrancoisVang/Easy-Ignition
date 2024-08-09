@@ -1,0 +1,4 @@
+name: ezIgnite
+version: '1.0'
+main: me.trusty.ezIgnite.EzIgnite
+api-version: '1.21'
