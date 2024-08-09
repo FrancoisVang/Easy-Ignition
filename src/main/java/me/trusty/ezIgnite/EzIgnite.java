@@ -44,4 +44,9 @@ public final class EzIgnite extends JavaPlugin implements Listener {
             }
         }
     }
+
+    @Override
+    public void onDisable() {
+        //section for code here
+    }
 }
