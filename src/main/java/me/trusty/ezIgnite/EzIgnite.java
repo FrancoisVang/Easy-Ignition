@@ -33,7 +33,7 @@ public final class EzIgnite extends JavaPlugin implements Listener {
                 // Get the player who clicked the block
                 Player player = event.getPlayer();
                 Player p = event.getPlayer();
-                // Check if the player has an empty hand
+                // Check if the player has an empty hand & checks for permissions
                 ItemStack handItem = player.getInventory().getItemInMainHand();
                 if (handItem.getType() == Material.AIR && p.hasPermission("ezignite.light")){
                     // Ignite the TNT
